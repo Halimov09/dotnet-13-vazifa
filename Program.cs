@@ -1,6 +1,8 @@
 ﻿using CONTACT.classes;
 
-while (true)
+try
+{
+    while (true)
 {
     Console.WriteLine("1. Yangi kontakt qo'shish");
     Console.WriteLine("2. Kontaktlarni ko'rish");
@@ -62,3 +64,11 @@ static void OChirish()
     string ism = Console.ReadLine();
     Managecontact.OChirish(ism);
 };
+}
+catch (Exception error)
+{
+    Console.WriteLine(error.Message);
+}
+finally{
+    Console.WriteLine("Dastur yakunlandi");
+}
